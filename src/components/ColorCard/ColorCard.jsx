@@ -1,4 +1,4 @@
-
+import './ColorCard.scss'
 const ColorCard = ({item}) => {
 
     return(

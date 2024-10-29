@@ -35,92 +35,158 @@ export const ColorCarrusel = () =>{
     <Carousel data-bs-theme="dark">
         <Carousel.Item>
             <div className='div_carousel_container'>
+                <div className='div_colores' >
                 {obtenerGrupoColores('1').map((color) => (
-                    <div className='div_colores' key={color.id}>
+                    <div key={color.id}>
                         <ColorCard item={color} />
                     </div>
                 ))}
+                </div>
+                <div className='div_colores' >
+                {obtenerGrupoColores('2').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
             </div>
         </Carousel.Item>
         <Carousel.Item>
             <div className='div_carousel_container'>
-                <div className='div_colores'>
-                    <div className='div_card-color_container'>
-                        <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                        <div className='div_color-title'><p>AMBERES 2</p></div>
+                <div className='div_colores' >
+                {obtenerGrupoColores('3').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
                     </div>
-                    <div className='div_card-color_container'>
-                        <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                        <div className='div_color-title'><p>AMBERES 2</p></div>
-                    </div>
-                    <div className='div_card-color_container'>
-                        <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                        <div className='div_color-title'><p>AMBERES 2</p></div>
-                    </div>
-                    <div className='div_card-color_container'>
-                        <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                        <div className='div_color-title'><p>AMBERES 2</p></div>
-                    </div>
+                ))}
                 </div>
-                <div className='div_colores'>
-                    <div className='div_card-color_container'>
-                        <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                        <div className='div_color-title'><p>AMBERES 2</p></div>
+                <div className='div_colores' >
+                {obtenerGrupoColores('4').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
                     </div>
-                    <div className='div_card-color_container'>
-                        <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                        <div className='div_color-title'><p>AMBERES 2</p></div>
-                    </div>
-                    <div className='div_card-color_container'>
-                        <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                        <div className='div_color-title'><p>AMBERES 2</p></div>
-                    </div>
-                    <div className='div_card-color_container'>
-                        <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                        <div className='div_color-title'><p>AMBERES 2</p></div>
-                    </div>
+                ))}
                 </div>
             </div>
         </Carousel.Item>
         <Carousel.Item>
-        <div className='div_carousel_container'>
-              <div className='div_colores'>
-                 <div className='div_card-color_container'>
-                    <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                    <div className='div_color-title'><p>AMBERES 3</p></div>
-                 </div>
-                 <div className='div_card-color_container'>
-                    <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                    <div className='div_color-title'><p>AMBERES 3</p></div>
-                 </div>
-                 <div className='div_card-color_container'>
-                    <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                    <div className='div_color-title'><p>AMBERES 3</p></div>
-                 </div>
-                 <div className='div_card-color_container'>
-                    <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                    <div className='div_color-title'><p>AMBERES 3</p></div>
-                 </div>
-              </div>
-              <div className='div_colores'>
-                 <div className='div_card-color_container'>
-                    <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                    <div className='div_color-title'><p>AMBERES 3</p></div>
-                 </div>
-                 <div className='div_card-color_container'>
-                    <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                    <div className='div_color-title'><p>AMBERES 3</p></div>
-                 </div>
-                 <div className='div_card-color_container'>
-                    <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                    <div className='div_color-title'><p>AMBERES 3</p></div>
-                 </div>
-                 <div className='div_card-color_container'>
-                    <div className='div_color-img'><img src="https://www.faplaconline.com.ar/home/medias/AR-058DMT-MEL-base-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTUzNjB8aW1hZ2UvanBlZ3xhR05qTDJneFppODRPREUyT1RJM09EWTJPVEV3TDBGU1h6QTFPRVJOVkY5TlJVeGZZbUZ6WlY4eE1qQXdWM2d4TWpBd1NBfDUyNmM2MzU0OWRmYmYwMGE0N2Q2NzRkMmE2NTY1NTAxNjAzNzY3MTgxMzk0MmM5ZDAxMTdiNWY0NTk3MDg3MzI" alt="AMBERES" /></div>
-                    <div className='div_color-title'><p>AMBERES 3</p></div>
-                 </div>
-              </div>
-           </div>
+            <div className='div_carousel_container'>
+                <div className='div_colores' >
+                {obtenerGrupoColores('5').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+                <div className='div_colores' >
+                {obtenerGrupoColores('6').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+            </div>
+        </Carousel.Item>
+        <Carousel.Item>
+            <div className='div_carousel_container'>
+                <div className='div_colores' >
+                {obtenerGrupoColores('7').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+                <div className='div_colores' >
+                {obtenerGrupoColores('8').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+            </div>
+        </Carousel.Item>
+        <Carousel.Item>
+            <div className='div_carousel_container'>
+                <div className='div_colores' >
+                {obtenerGrupoColores('9').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+                <div className='div_colores' >
+                {obtenerGrupoColores('10').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+            </div>
+        </Carousel.Item>
+        <Carousel.Item>
+            <div className='div_carousel_container'>
+                <div className='div_colores' >
+                {obtenerGrupoColores('11').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+                <div className='div_colores' >
+                {obtenerGrupoColores('12').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+            </div>
+        </Carousel.Item>
+        <Carousel.Item>
+            <div className='div_carousel_container'>
+                <div className='div_colores' >
+                {obtenerGrupoColores('13').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+                <div className='div_colores' >
+                {obtenerGrupoColores('14').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+            </div>
+        </Carousel.Item>
+        <Carousel.Item>
+            <div className='div_carousel_container'>
+                <div className='div_colores' >
+                {obtenerGrupoColores('15').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+                <div className='div_colores' >
+                {obtenerGrupoColores('16').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+            </div>
+        </Carousel.Item>
+        <Carousel.Item>
+            <div className='div_carousel_container'>
+                <div className='div_colores' >
+                {obtenerGrupoColores('17').map((color) => (
+                    <div key={color.id}>
+                        <ColorCard item={color} />
+                    </div>
+                ))}
+                </div>
+            </div>
         </Carousel.Item>
      </Carousel>
     )
