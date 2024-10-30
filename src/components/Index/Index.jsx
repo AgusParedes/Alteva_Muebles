@@ -1,4 +1,5 @@
 import './Index.scss';
+import { Link } from 'react-router-dom'
 import { ColorCarrusel } from '../ColorCarrusel/ColorCarrusel.jsx'
 
 
@@ -55,7 +56,13 @@ export const Index = () =>{
             <h4>NUESTROS COLORES</h4>
          </div>
          <ColorCarrusel/>
-
+         <div className='div_botonVerColores'>
+            <div>
+               <Link>VER TODOS LOS COLORES</Link>
+            </div>
+         </div>
+         <div className='ESPACIO'>
+         </div>
       </>
    )
 }

@@ -54,6 +54,7 @@
          .boton_foto_index:hover{
             background-color:  white;
             border: 1px solid #C1A478;
+            color: #806c4e;
          }
       }
    }
@@ -91,6 +92,9 @@
             width: 53%;
       }
       }
+      .div_icono:hover{
+         background-color:#99753f
+      }
       p{
          font-size: 17px;
          font-weight: 600;
@@ -99,7 +103,46 @@
    }
    
 }
-
+.div_botonVerColores{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 55px;
+   background-color: currentColor;
+   div{
+      border: 2px solid white;
+      height: 36px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      transition: 0.1s ease-in-out;
+      a{
+         text-decoration: none;
+         color: white;
+         padding: 20px;
+         font-weight: 500;
+      }
+   }
+   div:hover{
+      border: 2px solid currentColor;
+      background-color: white;
+      height: 36px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      a:hover{
+         text-decoration: none;
+         color: currentColor;
+         padding: 20px;
+         font-weight: 500;
+      }
+   }
+}
+.ESPACIO{
+   width: 100%;
+   height: 500px;
+}
 
 
 
