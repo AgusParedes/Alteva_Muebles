@@ -15,10 +15,10 @@ export const Header = () =>{
             <img src={Logo_letras} alt="Logo" className='letras_logo'/>
          </div>
          <nav class="NavBar">
-            <Link to="" className='inicio_page_header'>INICIO</Link>
+            <Link to="/" className='inicio_page_header'>INICIO</Link>
             <Link to="" className='productos_page_header'>PRODUCTOS</Link>
             <Link to="" className='sobreNosotros_page_header'>SOBRE NOSTROS</Link>
-            <Link to="" className='sobreNosotros_page_header'>CONTACTO</Link>
+            <Link to="/Contacto" className='sobreNosotros_page_header'>CONTACTO</Link>
          </nav>
          <div className='header_redes_container'>
             <a href="https://www.facebook.com/profile.php?id=100063653134693" target="_blank" class="icono_redes"><i class="fab fa-facebook-f"></i></a>
