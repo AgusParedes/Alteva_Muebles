@@ -11,7 +11,7 @@ export const Contacto = () =>{
                             <p>¡Contáctanos y <span className="colorLetrasTitulo">OBTÉN EL MUEBLE DE TUS SUEÑOS!</span></p>
                         </div>
                         <div className='div_text'>
-                            <p>Para cualquier consulta o duda, sin compromiso, no dudes en contactarnos. Puedes hacerlo haciendo clic en los íconos de nuestras redes sociales, mandando un menaje o llamándonos por teléfono al +543404417996, o visitándonos en Guillermo Tell 135. ¡Estamos aquí para ayudarte!</p>
+                            <p>Para cualquier consulta o duda, sin compromiso, no dudes en contactarnos. Podes hacerlo dandole clic en los íconos de nuestras redes sociales, mandando un menaje o llamándonos por teléfono al +543404417996, o visitándonos en Guillermo Tell 135. ¡Estamos aquí para ayudarte!</p>
                         </div>
                     </div>
                     <div className='div_containerTarjetasRedes'>
@@ -27,9 +27,8 @@ export const Contacto = () =>{
                         <a href="https://www.instagram.com/dario.j.p/" target="_blank" class="icono_redes"><i class="fab fa-instagram"></i></a>
                         <p>Instagram</p>
                     </div>
+                    </div>
                 </div>
-                </div>
-            
                 <div className='div_mapa'>
                         <div>
                             <iframe
@@ -43,7 +42,6 @@ export const Contacto = () =>{
                                 title="Ubicación en Google Maps"
                             ></iframe>
                         </div>
-                        
                     </div>
             </div>
         </>

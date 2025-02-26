@@ -1,4 +1,4 @@
-.header{
+.header_grande{
    height: 120px;
    .header__container{
       display: flex;
@@ -20,6 +20,7 @@
          align-items: center;
          width: 50%;
          justify-content: space-between;
+         gap: 10px;
          a{
             text-decoration: none;
             font-size: 16px;
@@ -32,7 +33,6 @@
          }
          a:hover{
             border-bottom: 1px solid #C1A478;
-            
          }
       }
       .header_redes_container{
@@ -52,6 +52,139 @@
             text-decoration: none;
             background-color: #C1A478;
          }
+      }
+   }
+}
+
+
+
+
+
+
+
+
+.header_chico{
+   display: none;
+   height: 120px;
+   .boton_menu{
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      width: 20%;
+      a{
+         background-color: #9b825c;
+         border-radius: 3px;
+         i{
+            text-decoration: none;
+            font-size: 30px;
+            padding: 5px 10px;
+            color: white;
+         }
+      }
+   }
+   .header_img_container{
+      display: flex ;
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+      img{
+         width: 40%;
+      }
+      .letras_logo{
+         margin-top: 15px;
+      }
+   }
+   .header_img_container_chico{
+      display: none;
+      width: 60%;
+      align-items: center;
+      justify-content: center;
+      img{
+         width: 60%;
+         min-width: 190px;
+      }
+      .letras_logo{
+         margin-top: 15px;
+      }
+   }
+   .header_redes_container{
+      width: 30%;
+      display: flex;
+      justify-content: end;
+      align-items: start;
+      a{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 30px;
+         height: 30px;
+         border-radius: 50%;
+         margin: 0 5px;
+         color: #fff;
+         text-decoration: none;
+         background-color: #C1A478;
+      }
+   }
+}
+
+
+
+.offcanvas{
+   max-width: 50% !important; 
+   .offcanvas-body{
+   .NavBar{
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         a{
+            text-decoration: none;
+            color: black;
+         }
+      }
+   }
+}
+
+
+@media (max-width: 1090px){
+   .header_grande{
+      .header__container{
+         .NavBar{
+            a{
+               font-size: 14px;
+            }
+         }
+      }
+   }
+}
+@media (max-width: 992px) {
+   .header_chico{
+      display: flex;
+   
+   }
+   .header_grande{
+      display: none;
+   }
+}
+@media (max-width: 695px) {
+   .header_chico{
+      .header_img_container_chico{
+         display: flex;
+      }
+      .header_img_container{
+         display: none;
+      }
+   }
+}
+@media (max-width: 455px) {
+   .header_chico{
+      .boton_menu{
+         width: 20%;
+      }
+      .header_img_container_chico{
+         width: 80%;
+      }
+      .header_redes_container{
+         display: none;
       }
    }
 }

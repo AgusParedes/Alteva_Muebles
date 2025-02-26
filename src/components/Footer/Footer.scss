@@ -28,7 +28,7 @@ footer{
                     width: 150px;
                 }
             }
-            P{
+            p{
                 color: white;
                 font-weight: 600;
                 margin-top: 15px;
@@ -49,5 +49,28 @@ footer{
             }
             
         }
+    }
+}
+
+@media (max-width: 580px) {
+    footer{
+        .div_containerFooter{
+            flex-direction: column-reverse;
+            .div_footerIzq{
+                margin-right: 30px;
+                width: 100%;
+                p{
+                    font-size: 10px;
+                }
+            }
+            .div_footerMed{
+            width: 100%;
+            p{
+                font-size: 10px;
+            }
+        }
+        }
+        
+        
     }
 }

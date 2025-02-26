@@ -8,7 +8,7 @@ export const Footer = () => {
     <footer>
         <div className='div_containerFooter'>
             <div className='div_footerIzq'>
-                <p>©Copyright Alteva- 2024. Todos los derechos reservados.</p>
+                <p>©Copyright Alteva- 2025. Todos los derechos reservados.</p>
             </div>
             <div className='div_footerMed'>
                 <div>
