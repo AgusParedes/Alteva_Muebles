@@ -4,17 +4,17 @@ export const Contacto = () =>{
    
     return(
         <>
-            <div className='div_containerContacto'>
+            <div className=' div_containerContacto'>
                 <div className='div_containerIzq'>
                     <div className='div_containerText'>
-                        <div className='div_titulo'>
+                        <div className='animate__animated animate__fadeInUp animate__delay-0.3s div_titulo'>
                             <p>¡Contáctanos y <span className="colorLetrasTitulo">OBTÉN EL MUEBLE DE TUS SUEÑOS!</span></p>
                         </div>
-                        <div className='div_text'>
-                            <p>Para cualquier consulta o duda, sin compromiso, no dudes en contactarnos. Podes hacerlo dandole clic en los íconos de nuestras redes sociales, mandando un menaje o llamándonos por teléfono al +543404417996, o visitándonos en Guillermo Tell 135. ¡Estamos aquí para ayudarte!</p>
+                        <div className='animate__animated animate__fadeInUp animate__delay-0.3s div_text'>
+                            <p>Para cualquier consulta o duda, sin compromiso, no dudes en contactarnos. Podes hacerlo dandole click en los íconos de nuestras redes sociales, mandando un menaje o llamándonos por teléfono al +543404417996, y tambien visitándonos en Guillermo Tell 135. ¡Estamos aquí para ayudarte!</p>
                         </div>
                     </div>
-                    <div className='div_containerTarjetasRedes'>
+                    <div className='animate__animated animate__fadeInUp animate__delay-0.3s div_containerTarjetasRedes'>
                     <div>
                         <a href="https://www.facebook.com/profile.php?id=100063653134693" target="_blank" class="icono_redes"><i class="fab fa-facebook-f"></i></a>
                         <p>Facebook</p>

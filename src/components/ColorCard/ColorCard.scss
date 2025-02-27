@@ -29,3 +29,75 @@
         }
     }
 }
+
+@media (max-width: 1000px) {
+    .div_card-color_container{
+        width: 127px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #e9ecef;
+        .div_color-img{
+            width: 112px;
+            height: 112px;
+            margin: 7px 0 18px 0;
+        }
+        .div_color-title{
+            width: 100%;
+            display: flex;
+    
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media (max-width: 740px) {
+    .div_card-color_container{
+        width: 106px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #e9ecef;
+        .div_color-img{
+            width: 93px;
+            height: 93px;
+            margin: 6px 0 15px 0;
+        }
+        .div_color-title{
+            width: 100%;
+            display: flex;
+    
+            p{
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 605px) {
+    .div_card-color_container{
+        width: 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #e9ecef;
+        .div_color-img{
+            width: 75px;
+            height: 75px;
+            margin: 5px 0 12px 0;
+        }
+        .div_color-title{
+            width: 100%;
+            display: flex;
+    
+            p{
+                font-size: 8px;
+            }
+        }
+    }
+}

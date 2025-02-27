@@ -1,6 +1,7 @@
 import './Index.scss';
 import { Link } from 'react-router-dom'
 import { ColorCarrusel } from '../ColorCarrusel/ColorCarrusel.jsx'
+import 'animate.css';
 
 
 
@@ -13,10 +14,10 @@ export const Index = () =>{
             <div class="foto_index_med">
                <div class="div_texto_fotoMed">
                   <div>
-                     <p class="text_foto_index">MUEBLES DE MELAMINA</p>
-                     <span class="text_foto_index">A MEDIDA</span>
-                     <div>
-                        <button class="boton_foto_index">CONSEGUÍ EL TUYO</button>
+                  <p class="animate__animated animate__fadeInUp animate__delay-0.3s text_foto_index">MUEBLES DE MELAMINA</p>
+                  <p class="animate__animated animate__fadeInUp animate__delay-0.3s text_foto_index">A MEDIDA</p>
+                  <div>
+                        <button class="boton_foto_index animate__animated animate__fadeInUp animate__delay-0.3s">CONSEGUÍ EL TUYO</button>
                      </div>
                   </div>
                </div>

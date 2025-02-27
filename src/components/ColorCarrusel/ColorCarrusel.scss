@@ -15,3 +15,27 @@
 .carousel{
    background-color: currentColor;
 }
+
+@media (max-width: 1000px) {
+   .div_carousel_container{
+      .div_colores{
+         display: flex;
+         justify-content: center;
+         gap: 10px;
+         margin: 10px;
+      }
+   }
+}
+@media (max-width: 740px) {
+   .div_carousel_container{
+      height: 350px;
+   }
+}
+@media (max-width: 535px) {
+   .carousel-control-prev{
+      display: none !important;
+   }
+   .carousel-control-next{
+      display: none !important;
+   }
+}

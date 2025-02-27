@@ -69,6 +69,7 @@
                 font-weight: 100;
                 font-style: normal;
                 font-size: 14px;
+                color: black;
             }
         }
         
@@ -95,7 +96,18 @@
         .div_containerIzq{
             justify-content: center;
             width: 90%;
+            .div_containerText{
+                text-align: justify;
+            }
+            .div_containerTarjetasRedes{
+            div{
+                p{
+                    font-weight: 400;
+                }
+                }
+            }  
         }
+        
         .div_mapa{
             width: 600px;
         }
