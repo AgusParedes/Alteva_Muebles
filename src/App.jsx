@@ -8,24 +8,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
 function App() {
-
-return (
-   <>
-   <BrowserRouter>
-
-   <Header/>
-
-   <Routes>
-      <Route path='/' element={ <Index/> }/>
-      <Route path='/Contacto' element={ <Contacto/> }/>
-      <Route path='/SobreNosotros' element={ <SobreNosotros/> }/>
-   </Routes>
-
-   <Footer/>
-
-</BrowserRouter>
-</>
+   return (
+     <div className="app-container">
+       <BrowserRouter>
+         <Header />
+ 
+         <div className="main-content">
+           <Routes>
+             <Route path='/' element={<Index />} />
+             <Route path='/Contacto' element={<Contacto />} />
+             <Route path='/SobreNosotros' element={<SobreNosotros />} />
+           </Routes>
+         </div>
+ 
+         <Footer />
+       </BrowserRouter>
+     </div>
    )
-}
+ }
 
 export default App

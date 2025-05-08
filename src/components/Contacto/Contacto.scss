@@ -1,6 +1,7 @@
 .div_containerContacto{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 70px;
     .titulos_paginas{
         margin: 30px 0 30px 30px;
     }
@@ -17,23 +18,26 @@
             align-items: center;
             flex-direction: column;
             padding: 10px;
-            
+            margin-top: 40px;
             .div_titulo{
                 display: flex;
                 p{
                     font-family: "Archivo Black", sans-serif;
                     font-weight: 400;
                     font-style: normal;
-                    font-size: 30px;
+                    font-size: clamp(1.0rem, 3vw, 1.8rem);
                 }
                 .colorLetrasTitulo{
                     color: #9b825c ;
+                    font-size: clamp(1.0rem, 3vw, 1.8rem);
                 }
             }
             .div_text{
+                width: 81%;
                 p{
-                    font-size: 17px;
+                    font-size: clamp(0.95rem, 2vw, 1.05rem);
                     font-weight: 400;
+                    line-height: 35px;
                 }
             }
             
@@ -43,6 +47,8 @@
     .div_containerTarjetasRedes{
         display: flex;
         justify-content: center;
+        margin-bottom: 40px ;
+
         div{
             display: flex;
             flex-direction: column;
@@ -81,6 +87,7 @@
         width: 50%;
         min-width: 300px;
         min-height: 300px;
+        margin-top: 30px;
         div{
             border: 2px solid black;
             width: 85%;
@@ -89,10 +96,10 @@
     }
 }
 
-
-@media (max-width: 599px) {
+@media (max-width: 1341px) {
     .div_containerContacto{
         justify-content: center;
+        margin-top: 20px;
         .div_containerIzq{
             justify-content: center;
             width: 90%;
@@ -107,9 +114,9 @@
                 }
             }  
         }
-        
         .div_mapa{
-            width: 600px;
+            width: 700px;
+            height: 400px;
         }
 }
 }
@@ -119,6 +126,13 @@
             div{
                 a{
                     margin: 40px 20px 20px 20px;
+                }
+            }
+        }
+        .div_containerIzq{
+            .div_containerText{
+                .div_text{
+                    width: 100%;
                 }
             }
         }

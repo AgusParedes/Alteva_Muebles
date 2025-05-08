@@ -32,7 +32,7 @@ export const ColorCarrusel = () =>{
 
 
     return(
-    <Carousel data-bs-theme="dark">
+    <Carousel>
         <Carousel.Item>
             <div className='div_carousel_container'>
                 <div className='div_colores' >
