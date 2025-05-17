@@ -34,15 +34,15 @@ export const Index = () =>{
             </div>
             <div className='div_categoria'>
                <div className='div_icono'><img src="/public/icono_vestidor.png" alt="" /></div>
-               <p>VESTIDOR</p>
+               <p>PLACAR Y VESTIDOR</p>
             </div>
             <div className='div_categoria'>
                <div className='div_icono'><img src="/public/icono_rackDeTv.png" alt="" /></div>
-               <p>RACK DE TV</p>
+               <p>MESITA Y RACK DE TV</p>
             </div>
             <div className='div_categoria'>
                <div className='div_icono'><img src="/public/icono_cama.png" alt="" /></div>
-               <p>CAMA</p>
+               <p>RESPALDAR Y CAMA</p>
             </div>
             <div className='div_categoria'>
                <div className='div_icono'><img src="/public/icono_escritorio.png" alt="" /></div>
@@ -59,7 +59,7 @@ export const Index = () =>{
          <ColorCarrusel/>
          <div className='div_botonVerColores'>
             <div>
-               <Link>VER TODOS LOS COLORES</Link>
+               <Link to="/Colores">VER TODOS LOS COLORES</Link>
             </div>
          </div>
          <div className='ESPACIO'>

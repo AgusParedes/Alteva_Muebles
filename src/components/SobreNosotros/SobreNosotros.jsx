@@ -34,7 +34,7 @@ export const SobreNosotros = () =>{
                     </div>
                     <div className='div_textoSN'>
                         <div className='tituloSN texto_oscuro tituloSN_oscuro'>NUESTRA HISTORIA</div>
-                        <div className='descripcionSN texto_oscuro'>Después de 14 años trabajando en una fábrica de muebles, decidí dar el paso y comenzar mi propio camino. Hace ya dos años que trabajo de forma independiente, creando muebles a medida en melamina, con dedicación y pasión por lo que hago</div>
+                        <div className='descripcionSN texto_oscuro'>Después de 14 años trabajando en una fábrica de muebles, decidí dar el paso y comenzar mi propio camino. Hace ya dos años que trabajo de forma independiente, creando muebles a medida en melamina, con dedicación y pasión por lo que hago.</div>
                     </div>
                 </div>
             </section>
@@ -45,7 +45,7 @@ export const SobreNosotros = () =>{
                     </div>
                     <div className='div_textoSN'>
                         <div className='tituloSN'>SERVICIOS</div>
-                        <div className='descripcionSN'>Los servicios incluyes el transporte e instalacion del mueble, usted no tendra que porcuparse por nada, cordinamos una fecha y hora que le sea mas comodo y se lo instalaremos</div>
+                        <div className='descripcionSN'>Los servicios incluyes el transporte e instalacion del mueble, usted no tendra que porcuparse por nada, cordinamos una fecha y hora que le sea mas comodo y se lo instalaremos.</div>
                     </div>
                 </div>
             </section>

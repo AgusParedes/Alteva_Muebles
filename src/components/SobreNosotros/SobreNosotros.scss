@@ -175,6 +175,7 @@
                 }
                 .descripcionSN{
                     font-size: 17px;
+                    text-align: justify;
                 }
             }
             .div_iconoSN_oscuro{
@@ -190,11 +191,13 @@
     .div_SNContainer{
         .div_introduccionSN{
             div{
+                width: 95%;
                 .titulo_introduccionSN{
                     font-size: 28px;
                 }
                 .descripcion_introduccionSN{
                     font-size: 17px;
+                    text-align: justify;
                 }
             }
         }

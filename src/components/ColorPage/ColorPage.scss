@@ -1,0 +1,154 @@
+.div_introduccionCP {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+
+    div {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .titulo_introduccionCP {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .descripcion_introduccionCP {
+            margin: 10px 15px 0;
+            font-size: 19px;
+            font-family: "Raleway", sans-serif;
+            text-align: justify;
+        }
+    }
+}
+
+.categoria-selector {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+
+  .categoria-btn {
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #333;
+
+    &:hover {
+      background-color: #eaeaea;
+    }
+
+    &.active {
+      background-color: #000000;
+      color: white;
+      border-color: #000000;
+    }
+  }
+}
+
+.colores_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    .colorGrupo_container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .colorCard {
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        font-family: Lato, sans-serif;
+        font-weight: bold;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding-bottom: 10px;
+        transition: transform 0.3s ease;
+        cursor: default;
+
+        &:hover {
+        transform: scale(1.03);
+        }
+
+        .div_color-img {
+        img {
+            width: 200px;
+            margin: 10px 0 15px;
+            border-radius: 4px;
+        }
+        }
+
+        .div_color-title {
+        text-align: center;
+        }
+
+        &.bg-claro {
+        background-color: #f1f1f1; // gris claro
+        }
+
+        &.bg-oscuro {
+        background-color: #ffffff; // blanco
+        }
+
+        &.bg-madera {
+        background-color: #fdfaf6; // beige neutro
+        }
+}
+}
+@media (max-width: 980px) {
+   .div_introduccionCP {
+    div {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+}
+@media (max-width: 519px) {
+   .colores_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+        .colorGrupo_container {
+            gap: 13px;
+    .colorCard {
+        width: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        font-family: Lato, sans-serif;
+        font-weight: bold;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        padding-bottom: 10px;
+        transition: transform 0.3s ease;
+        cursor: default;
+    }
+    .div_color-img {
+        img {
+            width: 150px;
+            margin: 10px 0 15px;
+            border-radius: 4px;
+        }
+        }
+}
+}
+}
