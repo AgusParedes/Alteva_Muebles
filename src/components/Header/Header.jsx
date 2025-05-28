@@ -23,7 +23,7 @@ export const Header = () =>{
             </div>
             <nav class="NavBar">
                <Link to="/" className='inicio_page_header'>INICIO</Link>
-               <Link to="" className='productos_page_header'>PRODUCTOS</Link>
+               <Link to="/Productos" className='productos_page_header'>PRODUCTOS</Link>
                <Link to="/SobreNosotros" className='sobreNosotros_page_header'>SOBRE NOSTROS</Link>
                <Link to="/Contacto" className='sobreNosotros_page_header'>CONTACTO</Link>
             </nav>
@@ -66,7 +66,7 @@ export const Header = () =>{
             <Offcanvas.Body>
                <nav class="NavBar">
                   <Link onClick={handleClose} to="/" className='inicio_page_header'>INICIO</Link>
-                  <Link onClick={handleClose} to="" className='productos_page_header'>PRODUCTOS</Link>
+                  <Link onClick={handleClose} to="/Productos" className='productos_page_header'>PRODUCTOS</Link>
                   <Link onClick={handleClose} to="/SobreNosotros" className='sobreNosotros_page_header'>SOBRE NOSTROS</Link>
                   <Link onClick={handleClose} to="/Contacto" className='sobreNosotros_page_header'>CONTACTO</Link>
                </nav>
