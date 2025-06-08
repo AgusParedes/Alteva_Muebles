@@ -34,7 +34,7 @@ export const Index = () =>{
             </div>
             <div className='div_categoria'>
                <div className='div_icono'><img src="/public/icono_vestidor.png" alt="" /></div>
-               <p>PLACAR Y VESTIDOR</p>
+               <p>PLACARD Y VESTIDOR</p>
             </div>
             <div className='div_categoria'>
                <div className='div_icono'><img src="/public/icono_rackDeTv.png" alt="" /></div>

@@ -31,12 +31,12 @@
   margin: 20px 0;
 
   .categoria-btn {
-    width: 150px;
+    width: 200px;
     height: 50px;
     background-color: transparent;
     border: 2px solid #ccc;
-    border-radius: 30px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 15px;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -57,10 +57,10 @@
 .colores_container {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
     .colorGrupo_container {
-        width: 100%;
+        width: 80%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;

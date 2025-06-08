@@ -34,7 +34,7 @@ export const SobreNosotros = () =>{
                     </div>
                     <div className='div_textoSN'>
                         <div className='tituloSN texto_oscuro tituloSN_oscuro'>NUESTRA HISTORIA</div>
-                        <div className='descripcionSN texto_oscuro'>Después de 14 años trabajando en una fábrica de muebles, decidí dar el paso y comenzar mi propio camino. Hace ya dos años que trabajo de forma independiente, creando muebles a medida en melamina, con dedicación y pasión por lo que hago.</div>
+                        <div className='descripcionSN texto_oscuro'>Después de 15 años trabajando en una fábrica de muebles, decidí dar el paso y comenzar mi propio camino. Hace ya 5 años que trabajo de forma independiente, creando muebles a medida en melamina, con dedicación y pasión por lo que hago.</div>
                     </div>
                 </div>
             </section>

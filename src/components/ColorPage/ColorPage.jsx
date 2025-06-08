@@ -43,8 +43,8 @@ export const ColorPage = () => {
   {[
     { key: 'oscuro', label: 'Colores oscuros' },
     { key: 'claro', label: 'Colores claros' },
-    { key: 'maderaO', label: 'Madera oscura' },
-    { key: 'maderaC', label: 'Madera clara' },
+    { key: 'maderaO', label: 'Simil madera oscura' },
+    { key: 'maderaC', label: 'Simil madera clara' },
   ].map((cat) => (
     <button
       key={cat.key}
