@@ -5,7 +5,9 @@ import { Contacto } from './components/Contacto/Contacto.jsx'
 import { SobreNosotros } from './components/SobreNosotros/SobreNosotros.jsx'
 import { ColorPage } from './components/ColorPage/ColorPage.jsx'
 import { Productos } from './components/Productos/Productos.jsx'
+import { ProductDetailContainer } from './components/ProductDetailContainer/ProductDetailContainer.jsx'
 import { Footer } from './components/Footer/Footer.jsx'
+import {AdminPanel} from './components/AdminPanel/AdminPanel.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
@@ -21,7 +23,10 @@ function App() {
              <Route path='/Contacto' element={<Contacto />} />
              <Route path='/SobreNosotros' element={<SobreNosotros />} />
              <Route path='/Colores' element={<ColorPage />} />
-             <Route path='/Productos' element={<Productos />} />
+             <Route path='/Productos' element={<Productos />}/>
+             <Route path='/Productos/:categoryId' element={<Productos />}/>
+             <Route path='/Producto/:ProductId' element={<ProductDetailContainer />}/>
+             <Route path="/administrador/ABC123" element={<AdminPanel />} />
            </Routes>
          </div>
  

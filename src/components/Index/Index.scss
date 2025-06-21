@@ -25,6 +25,7 @@
       background-repeat: no-repeat;
       .div_texto_fotoMed{
          display: flex;
+         flex-direction: column;
          justify-content: center;
          align-items: center;
          text-align: center;
@@ -43,16 +44,18 @@
             display: inline-block;
          }
          .boton_foto_index{
-            margin-top: 45px;
+            margin-top: 25px;
             padding: 5px;
             font-size: 16px;
             background-color: #DBDDDF;
             border: 1px solid white ;
-            color: #474747;
             transition: all 0.7s ease;
             font-weight:500;
             border-radius: 6px;
-            width: 70%;
+            a{
+               text-decoration: none;
+               color: #474747;
+            }
          }
          .boton_foto_index:hover{
             background-color:  white;
@@ -206,7 +209,6 @@
                transition: all 0.7s ease;
                font-weight:500;
                border-radius: 6px;
-               width: 70%;
             }
          }
       }
@@ -243,11 +245,12 @@
       flex-wrap: wrap;
       .div_categoria{
          .div_icono{
-         }
-         p{
+            p{
             font-size: 10px;
             font-weight: 600;
          }
+         }
+         
       }
    }
 }
@@ -294,7 +297,6 @@
                transition: all 0.7s ease;
                font-weight:500;
                border-radius: 6px;
-               width: 70%;
             }
          }
       }
@@ -312,7 +314,7 @@
 }
    .div_categorias_index_conteiner{
       flex-wrap: wrap;
-      gap: 60px;
+      gap: 20px;
       .div_categoria{
          width: calc(33.33% - 20px);
          margin: 10px;
@@ -343,11 +345,12 @@
    .div_categorias_index_conteiner{
       .div_categoria{
          .div_icono{
-         }
-         p{
+            p{
             font-size: 9px;
             font-weight: 600;
          }
+         }
+         
       }
    }
 }
