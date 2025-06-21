@@ -7,7 +7,6 @@ import { ColorPage } from './components/ColorPage/ColorPage.jsx'
 import { Productos } from './components/Productos/Productos.jsx'
 import { ProductDetailContainer } from './components/ProductDetailContainer/ProductDetailContainer.jsx'
 import { Footer } from './components/Footer/Footer.jsx'
-import {AdminPanel} from './components/AdminPanel/AdminPanel.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
@@ -26,7 +25,6 @@ function App() {
              <Route path='/Productos' element={<Productos />}/>
              <Route path='/Productos/:categoryId' element={<Productos />}/>
              <Route path='/Producto/:ProductId' element={<ProductDetailContainer />}/>
-             <Route path="/administrador/ABC123" element={<AdminPanel />} />
            </Routes>
          </div>
  
