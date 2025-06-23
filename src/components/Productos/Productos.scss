@@ -16,16 +16,15 @@
 .pagination {
   margin-top: 20px;
   text-align: center;
+  button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;
 }
-
-.pagination button {
-  margin: 5px;
-  padding: 8px 12px;
-  background-color: #eee;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.2s;
 }
 
 .pagination button:hover {
@@ -36,10 +35,6 @@
   background-color: #333;
   color: white;
 }
-
-
-
-
 
 .serif {
   font-family: Georgia, 'Times New Roman', serif;
