@@ -11,7 +11,7 @@ export const Index = () =>{
    return(
       <>
       <div class="grid_container_foto_index">
-         <div class="foto_index_izq"><img src="/public/Foto_index_1.png" alt="" /></div>
+         <div class="foto_index_izq"><img src="/Foto_index_1.png" alt="" /></div>
             <div class="foto_index_med">
                <div class="div_texto_fotoMed">
                   <div>
@@ -25,34 +25,34 @@ export const Index = () =>{
                   </div>
                </div>
             </div>
-            <div class="foto_index_der"><img src="/public/Foto_index_3.png" alt=""/></div>
+            <div class="foto_index_der"><img src="/Foto_index_3.png" alt=""/></div>
          </div>
          <div className='div_titulos_index'>
          <h4>CATEGORIAS</h4>
          </div>
          <div className='div_categorias_index_conteiner'>
             <div className='div_categoria'>
-               <Link to="/Productos/Cocina" className='div_icono'><img src="/public/icono_cocina.png" alt="" /></Link>
+               <Link to="/Productos/Cocina" className='div_icono'><img src="/icono_cocina.png" alt="" /></Link>
                <p>COCINA</p>
             </div>
             <div className='div_categoria'>
-               <Link to="/Productos/Placard y Vestidor" className='div_icono'><img src="/public/icono_vestidor.png" alt="" /></Link>
+               <Link to="/Productos/Placard y Vestidor" className='div_icono'><img src="/icono_vestidor.png" alt="" /></Link>
                <p>PLACARD Y VESTIDOR</p>
             </div>
             <div className='div_categoria'>
-               <Link to="/Productos/Mueble y Rack de TV" className='div_icono'><img src="/public/icono_rackDeTv.png" alt="" /></Link>
+               <Link to="/Productos/Mueble y Rack de TV" className='div_icono'><img src="/icono_rackDeTv.png" alt="" /></Link>
                <p>MUEBLE Y RACK DE TV</p>
             </div>
             <div className='div_categoria'>
-               <Link to="/Productos/Cama" className='div_icono'><img src="/public/icono_cama.png" alt="" /></Link>
+               <Link to="/Productos/Cama" className='div_icono'><img src="/icono_cama.png" alt="" /></Link>
                <p>RESPALDAR Y CAMA</p>
             </div>
             <div className='div_categoria'>
-               <Link to="/Productos/Escritorio" className='div_icono'><img src="/public/icono_escritorio.png" alt="" /></Link>
+               <Link to="/Productos/Escritorio" className='div_icono'><img src="/icono_escritorio.png" alt="" /></Link>
                <p>ESCRITORIO</p>
             </div>
             <div className='div_categoria'>
-               <Link to="/Productos/Otros" className='div_icono'><img src="/public/icono_pregunta.png" alt="" /></Link>
+               <Link to="/Productos/Otros" className='div_icono'><img src="/icono_pregunta.png" alt="" /></Link>
                <p>OTRO</p>
             </div>
          </div>

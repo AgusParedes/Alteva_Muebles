@@ -35,14 +35,14 @@ export const ProductDetail = ({ Product }) => {
         </button>
       </div>
 
-      <div className="detalle-container">
+      <div className="detail_container">
         <div className="detail_texto">
-          <h2 className="detalle-titulo">{Product.titulo}</h2>
-          <div className="detalle-categoria-codigo">
-            <span className="detalle-categoria">📁 {Product.categoria}</span>
-            <span className="detalle-codigo">🆔 {Product.code}</span>
+          <h2 className="detail_titulo">{Product.titulo}</h2>
+          <div className="detail_info">
+            <span className="detail-categoria">📁 {Product.categoria}</span>
+            <span className="detail-codigo">🆔 {Product.code}</span>
           </div>
-          <p className="detalle-descripcion">{Product.descripcion}</p>
+          <p className="detail_descripcion">{Product.descripcion}</p>
           <div className="div_buttonDetail">
             <a
               href={`https://wa.me/5493404417996?text=${encodeURIComponent(

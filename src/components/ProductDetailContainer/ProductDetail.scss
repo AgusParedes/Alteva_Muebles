@@ -20,7 +20,7 @@
 }
 
 
-.detalle-container {
+.detail_container {
   max-width: 1300px;
   margin: 0 auto 70px;
   font-family: 'Segoe UI', sans-serif;
@@ -31,54 +31,53 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.detail_texto {
+  .detail_texto {
   flex: 1 1 400px;
   max-width: 600px;
+    .detail_titulo {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+      color: #1e1e1e;
+    }
+    .detail_info {
+      font-size: 0.95rem;
+      color: #666;
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
 
-  .detalle-titulo {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 0.75rem;
-    color: #1e1e1e;
-  }
-
-  .detalle-categoria-codigo {
-    font-size: 0.95rem;
-    color: #666;
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .detalle-descripcion {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 1.5rem;
-  }
-  .div_buttonDetail{
-    display: flex;
-    justify-content: center;
-    a {
-    background-color: #000000;
-    color: white;
-    padding: 13px 19px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    transition: background-color 0.3s ease;
-    font-family: "Montserrat", sans-serif;
-    text-decoration: none;
-    text-align: center;
-    &:hover {
-      background-color: #242424;
+    .detail_descripcion {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+    .div_buttonDetail{
+      display: flex;
+      justify-content: center;
+      a {
+      background-color: #000000;
+      color: white;
+      padding: 13px 19px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease;
+      font-family: "Montserrat", sans-serif;
+      text-decoration: none;
+      text-align: center;
+      &:hover {
+        background-color: #242424;
+      }
     }
   }
 }
 }
+
+
 
 .detail_imagenes {
   flex: 1 1 400px;
@@ -87,14 +86,6 @@
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-
-}
-
-.detalle-img {
-  width: 100%;
-  max-width: 500px;
-  object-fit: cover;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 
