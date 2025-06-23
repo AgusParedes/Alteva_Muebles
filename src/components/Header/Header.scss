@@ -153,9 +153,10 @@
 @media (max-width: 1750px) {
    .header_grande{
       .header__container{
+         width: 95%;
          .NavBar{
             a{
-               font-size: 14px;
+               font-size: 16px;
             }
          }
       }
@@ -164,10 +165,11 @@
 @media (max-width: 1578px) {
    .header_grande{
       .header__container{
+         width: 95%;
          .NavBar{
             width: 41%;
             a{
-               font-size: 14px;
+               font-size: 16px;
             }
          }
       }

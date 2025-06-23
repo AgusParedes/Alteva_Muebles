@@ -1,7 +1,8 @@
 import './ProductCard.scss';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ProductCard = React.memo(({ item }) => {
+const ProductCard = React.memo(({ item, pageParam }) => {
   return (
     <div className="productCard_container">
       <img
@@ -14,9 +15,9 @@ const ProductCard = React.memo(({ item }) => {
       <div className="productCard_text">
         <h4 className="productCard_title">{item.titulo}</h4>
         <div className="productCard_link">
-          <a href={`/Producto/${item.id}`}>
+          <Link to={`/Producto/${item.id}?page=${pageParam}`}>
             <p>VER MAS</p>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

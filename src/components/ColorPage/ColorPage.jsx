@@ -60,11 +60,11 @@ export const ColorPage = () => {
       <div className='colores_container'>
         <div className='colorGrupo_container'>
           {obtenerGrupoColores(categoriaSeleccionada).map((color) => (
-            <div key={color.id}  className={`colorCard ${color.tonalidad === 'oscuro' ? 'bg-claro' : color.tonalidad === 'claro' ? 'bg-oscuro' : 'bg-madera'}`}>
-              <div className='div_color-img'>
+            <div key={color.id}  className={`colorCard-ColorPage ${color.tonalidad === 'oscuro' ? 'bg-claro' : color.tonalidad === 'claro' ? 'bg-oscuro' : 'bg-madera'}`}>
+              <div className='div_color-img-ColorPage'>
                 <img src={color.img} alt={color.titulo} />
               </div>
-              <div className='div_color-title'>{color.titulo}</div>
+              <div className='div_color-title-ColorPage'>{color.titulo}</div>
             </div>
           ))}
         </div>
