@@ -51,7 +51,7 @@ export const ProductDetail = ({ Product }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Si querés algo con este estilo o parecido, hacé clic acá
+              Si querés algo con este estilo o parecido, hacé click acá
             </a>
           </div>
         </div>

@@ -13,7 +13,7 @@ export const SobreNosotros = () =>{
                     </div>
                     <div className='descripcion_introduccionSN'>
                         Alteva es una empresa familiar especializada en la creación de muebles a medida que combinan funcionalidad, estética y durabilidad. Con años de experiencia en carpintería, contamos con un amplio conocimiento que nos permite ofrecer soluciones únicas y creativas para cada cliente.
-                        Cuidamos cada detalle y nos comprometemos a entender tus necesidades para diseñar piezas que se adapten perfectamente a tu espacio y estilo de vida. Nuestro objetivo es transformar tus ideas en muebles que destaquen por su calidad y diseño personalizado.</div>
+                        Cuidamos cada detalle y nos comprometemos a entender tus necesidades para diseñar piezas que se adapten perfectamente a tu espacio y estilo de vida. Nuestro objetivo es transformar tus ideas en muebles que se destaquen por su calidad y diseño personalizado.</div>
                     </div>
                 </div>
             <section className='div_secciones_container'>
