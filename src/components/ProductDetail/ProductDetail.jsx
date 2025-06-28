@@ -23,13 +23,7 @@ export const ProductDetail = ({ Product }) => {
       <div className="div_botonVolver">
         <button
           className="volver-btn"
-          onClick={() => {
-            if (page) {
-              navigate(`/Productos?page=${page}`);
-            } else {
-              navigate(-1);
-            }
-          }}
+          onClick={() => navigate(-1)}
         >
           ← Volver
         </button>
