@@ -27,7 +27,6 @@ export const ProductDetailContainer = () => {
       .catch((e) => console.log(e));
   }, [ProductId]);
 
-  console.log(Product)
 
   return (<>
   {Product ? (

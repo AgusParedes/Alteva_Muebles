@@ -21,7 +21,6 @@ export const ColorCarrusel = () =>{
                 }
             })
             setcolores(docs)
-            console.log(docs)
         })
         .catch(e => console.log(e))
     },[])
