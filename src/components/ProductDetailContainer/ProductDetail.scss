@@ -1,125 +1,465 @@
-.div_botonVolver{
-  max-width: 1300px;
-  margin: 40px auto 0;
-  .volver-btn {
-    background-color: #222;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 16px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin: 0 0 20px 2rem; 
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
 
-    &:hover {
-      background-color: #444;
-    }
-  }
-}
+$color-brown: #8a6b45;
+$color-brown-dark: #6f5636;
+$color-text: #1c1c1c;
+$color-muted: #8a8a8a;
+$color-divider: #e3e0da;
+$color-bg-section: #f2f0ec;
 
 
 .detail_container {
   max-width: 1300px;
-  margin: 0 auto 70px;
+  margin: 60px auto 90px;
   font-family: 'Segoe UI', sans-serif;
   display: flex;
   flex-direction: row;
-  gap: 60px;
-  justify-content: space-between;
+  gap: 70px;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  .detail_texto {
-  flex: 1 1 400px;
-  max-width: 600px;
-    .detail_titulo {
-      font-size: 2.2rem;
-      font-weight: bold;
-      margin-bottom: 0.75rem;
-      color: #1e1e1e;
-    }
-    .detail_info {
-      font-size: 0.95rem;
-      color: #666;
+
+  .detail_imagenes {
+    flex: 1 1 420px;
+    max-width: 600px;
+
+    .detail_imagen_principal {
+      position: relative;
+      width: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+      background-color: #e9e7e2;
       display: flex;
-      gap: 1.5rem;
-      margin-bottom: 1.25rem;
+      align-items: center;
+      max-height: 500px;
+
+      .badge_nuevo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        background-color: #faf8f5;
+        color: $color-text;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 7px 14px;
+        border-radius: 20px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    .detail_miniaturas {
+      display: flex;
+      gap: 14px;
+      margin-top: 16px;
+
+      .miniatura_btn {
+        flex: 1 1 0;
+        aspect-ratio: 1 / 1;
+        max-width: 130px;
+        padding: 0;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        overflow: hidden;
+        background: none;
+        cursor: pointer;
+        transition: border-color 0.25s ease, opacity 0.25s ease;
+        opacity: 0.75;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &.activa {
+          border-color: $color-brown;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .detail_texto {
+    flex: 1 1 420px;
+    max-width: 560px;
+    padding-top: 6px;
+
+    .detail_meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+
+      .detail_categoria {
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: $color-text;
+      }
+
+      .detail_dot {
+        color: $color-muted;
+      }
+
+      .detail_codigo {
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: $color-muted;
+      }
+    }
+
+    .detail_titulo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.85rem;
+      line-height: 1.15;
+      font-weight: 700;
+      color: $color-text;
+      margin: 0 0 1.75rem;
+    }
+
+    .div_buttonDetail {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 1.75rem;
+
+      .btn_vermas {
+        display: inline-block;
+        background-color: $color-brown;
+        color: #fff;
+        padding: 14px 30px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $color-brown-dark;
+        }
+      }
     }
 
     .detail_descripcion {
       font-size: 1rem;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 1.5rem;
+      line-height: 1.75;
+      color: #444;
+      margin-bottom: 2rem;
     }
-    .div_buttonDetail{
-      display: flex;
-      justify-content: center;
-      a {
-      background-color: #000000;
-      color: white;
-      padding: 13px 19px;
+
+    .detail_divider {
       border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      border-top: 1px solid $color-divider;
+      margin: 0;
+    }
+  }
+}
+
+.otros_muebles {
+  background-color: $color-bg-section;
+  padding: 80px 0;
+
+  .otros_muebles_container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .otros_muebles_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+    .otros_muebles_titulo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.1rem;
+      color: $color-text;
+      margin: 0 0 0.5rem;
+      text-transform: capitalize;
+    }
+
+    .otros_muebles_subtitulo {
       font-size: 0.95rem;
-      transition: background-color 0.3s ease;
-      font-family: "Montserrat", sans-serif;
+      color: #555;
+      max-width: 520px;
+      margin: 0;
+    }
+
+    .ver_todo_link {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $color-brown;
       text-decoration: none;
-      text-align: center;
+      white-space: nowrap;
+
       &:hover {
-        background-color: #242424;
+        color: $color-brown-dark;
+      }
+    }
+  }
+
+  .otros_muebles_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    gap: 40px;
+    justify-content: space-around;
+  }
+
+  .otros_muebles_card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    .otros_muebles_img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1.1rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+    .div_titulo_otros_muebles{  
+      height: 60px;
+      .otros_muebles_card_titulo {
+        font-size: 15px;
+        color: $color-text;
+        margin: 0 0 0.6rem;
+      }
+    }
+
+
+    .ver_mas_card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #e9ddc8;
+      color: #3a352e;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 14px 20px;
+      border-radius: 9999px;
+      transition: background 0.25s ease;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-brown-dark;
       }
     }
   }
 }
-}
-
-
-
-.detail_imagenes {
-  flex: 1 1 400px;
-  max-width: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-}
-
 
 @media (max-width: 1350px) {
-.detail_container{
-  margin: 0 40px 70px; 
+  .detail_container{
+    margin: 0 40px 90px; 
+  }
 }
+
+@media (max-width: 1024px) {
+  .otros_muebles .otros_muebles_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 @media (max-width: 900px) {
-.div_botonVolver{
-  margin: 0 auto;
-  .volver-btn {
-    margin-left: 1rem;
-  }
-}
-.detail_container{
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  gap: 0;
-  margin: 0 auto 20px;
-  .detail_texto {
-  flex: none;
-  }
-  .detail_imagenes {
-    width: 100%;
-  }
-  .div_buttonDetail{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-    a {
-      font-size: 0.83rem;
+  .div_botonVolver{
+    margin: 0 auto;
+    .volver-btn {
+      margin-left: 1rem;
     }
+  }
+  .detail_container{
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+    margin: 0 auto 20px;
+
+    .detail_imagenes, .detail_texto {
+      flex: none;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .detail_imagenes .detail_miniaturas .miniatura_btn {
+      max-width: none;
+    }
+
+    .div_buttonDetail{
+      justify-content: center;
+
+      .btn_vermas {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .otros_muebles {
+    padding: 50px 0;
+
+    .otros_muebles_header {
+      align-items: flex-start;
+    }
+  }
 }
+
+@media (max-width: 600px) {
+  .otros_muebles .otros_muebles_grid {
+    grid-template-columns: 1fr;
+  }
 }
+.detail_imagen_principal {
+  cursor: zoom-in;
+}
+
+
+// ========================================
+// MODAL IMAGEN GRANDE
+// ========================================
+
+.imagen_modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  animation: aparecerModal 0.2s ease;
+}
+
+
+.imagen_modal_img {
+  display: block;
+
+  max-width: 90vw;
+  max-height: 90vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 4px;
+
+  animation: aparecerImagen 0.2s ease;
+}
+
+
+.imagen_modal_cerrar {
+  position: absolute;
+
+  top: 20px;
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  font-size: 42px;
+  font-weight: 200;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+}
+
+
+.imagen_modal_cerrar:hover {
+  opacity: 0.65;
+}
+
+
+// ========================================
+// ANIMACIONES
+// ========================================
+
+@keyframes aparecerModal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes aparecerImagen {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+// ========================================
+// MOBILE
+// ========================================
+
+@media (max-width: 768px) {
+  .imagen_modal {
+    padding: 20px;
+  }
+
+  .imagen_modal_img {
+    max-width: 94vw;
+    max-height: 85vh;
+  }
+
+  .imagen_modal_cerrar {
+    top: 10px;
+    right: 15px;
+
+    font-size: 38px;
+  }
 }

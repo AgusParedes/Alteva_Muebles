@@ -1,80 +1,85 @@
 import { Link } from 'react-router-dom'
+import Offcanvas from 'react-bootstrap/Offcanvas';
 import Logo_alteva from '../../assets/Logo_alteva.png'
 import Logo_letras from '../../assets/Logo_letras.png'
 import './Header.scss'
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
 
 
+export const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
 
-export const Header = () =>{
-   const [show, setShow] = useState(false);
+  const handleClose = () => setShowMenu(false);
+  const handleShow = () => setShowMenu(true);
 
-   const handleClose = () => setShow(false);
-   const handleShow = () => setShow(true);
-   
-      return(<>
-      <header className='header_grande'>
-         <div className='header__container'>
-            <div className='header_img_container'>
-               <img src={Logo_alteva} alt="Logo" />
-               <img src={Logo_letras} alt="Logo" className='letras_logo'/>
-            </div>
-            <nav class="NavBar">
-               <Link to="/" className='inicio_page_header'>INICIO</Link>
-               <Link to="/Productos" className='productos_page_header'>PRODUCTOS</Link>
-               <Link to="/SobreNosotros" className='sobreNosotros_page_header'>SOBRE NOSTROS</Link>
-               <Link to="/Contacto" className='sobreNosotros_page_header'>CONTACTO</Link>
-            </nav>
-            <div className='header_redes_container'>
-               <a href="https://www.facebook.com/profile.php?id=100063653134693" target="_blank" class="icono_redes"><i class="fab fa-facebook-f"></i></a>
-               <a href="https://api.whatsapp.com/send?phone=%2B5493404417996&data=AWBrttyS9oVC_GaCzsU3SS8WFODgnkWHJz4FdpjBJG_Gg7E1J5Lm_1o4eHd-n6tbdvcKDi8xlg140Kr51LwJmwAZ2AaZ_xUoJKPQ1cKKDxe5FWhsX5u4WwsgFCMj1gLOtB-4ljQ_IAgMClmNzN9t8cgfvrorFUrFp-yeWPc-g2fvsxc0qTSR-rMAyNUhFABSpZAWAdKM1ayHcnOEz3_D4NlL0RjEhElmNRyrxz8qAphq48cVOQb7yf6omZuLkChJPlq7muLrvnSmZoHWz6AySP1Lr4zoc25d7IDZyF0iUhJAsaN8AKA&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1WcVThJwP41mPqP2urw7_e2Us64wVNquBq9ZqBYP0N9-AynQxxDv2qyEo" target="_blank" class="icono_redes"><i class="fab fa-whatsapp"></i></a>
-               <a href="https://www.instagram.com/dario.j.p/" target="_blank" class="icono_redes"><i class="fab fa-instagram"></i></a>
-            </div>
-         </div>
-      </header>
+  return (
+    <header className="header">
+      <a href="#inicio" className="brand">
+        <img src={Logo_alteva} alt="Alteva Muebles" />
+        <img src={Logo_letras} alt="Alteva Muebles" />
+      </a>
 
+      {/* Nav visible solo en desktop */}
+      <nav className="nav nav--desktop">
+        <Link to="/" className='nav__link'>INICIO</Link>
+        <Link to="/Productos" className='nav__link'>PRODUCTOS</Link>
+        <Link to="/SobreNosotros" className='nav__link'>SOBRE NOSOTROS</Link>
+        <Link to="/Contacto" className='nav__link'>CONTACTO</Link>
+      </nav>
 
+      <div className="header__actions">
+        <div className="header__socials">
+          <a href="https://www.facebook.com/profile.php?id=100063653134693" target="_blank" rel="noreferrer" className="icono_redes">
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=%2B5493404417996&data=AWBrttyS9oVC_GaCzsU3SS8WFODgnkWHJz4FdpjBJG_Gg7E1J5Lm_1o4eHd-n6tbdvcKDi8xlg140Kr51LwJmwAZ2AaZ_xUoJKPQ1cKKDxe5FWhsX5u4WwsgFCMj1gLOtB-4ljQ_IAgMClmNzN9t8cgfvrorFUrFp-yeWPc-g2fvsxc0qTSR-rMAyNUhFABSpZAWAdKM1ayHcnOEz3_D4NlL0RjEhElmNRyrxz8qAphq48cVOQb7yf6omZuLkChJPlq7muLrvnSmZoHWz6AySP1Lr4zoc25d7IDZyF0iUhJAsaN8AKA&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1WcVThJwP41mPqP2urw7_e2Us64wVNquBq9ZqBYP0N9-AynQxxDv2qyEo" target="_blank" rel="noreferrer" className="icono_redes">
+            <i className="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.instagram.com/dario.j.p/" target="_blank" rel="noreferrer" className="icono_redes">
+            <i className="fab fa-instagram"></i>
+          </a>
+        </div>
 
+        {/* Botón hamburguesa, visible solo en mobile */}
+        <button
+          type="button"
+          className="menu-toggle"
+          onClick={handleShow}
+          aria-label="Abrir menú"
+        >
+          <span className="menu-toggle__bar"></span>
+          <span className="menu-toggle__bar"></span>
+          <span className="menu-toggle__bar"></span>
+        </button>
+      </div>
 
+      {/* Menú mobile */}
+      <Offcanvas show={showMenu} onHide={handleClose} placement="end" className="mobile-menu">
+        <Offcanvas.Header closeButton>
+          <img src={Logo_alteva} alt="Alteva Muebles" className="mobile-menu__logo" />
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <nav className="nav nav--mobile">
+            <Link to="/" className='nav__link' onClick={handleClose}>INICIO</Link>
+            <Link to="/Productos" className='nav__link' onClick={handleClose}>PRODUCTOS</Link>
+            <Link to="/SobreNosotros" className='nav__link' onClick={handleClose}>SOBRE NOSOTROS</Link>
+            <Link to="/Contacto" className='nav__link' onClick={handleClose}>CONTACTO</Link>
+          </nav>
 
-
-      <header className='header_chico'>
-         <div className='boton_menu'>
-            <a onClick={handleShow}>
-               <i class="fas fa-bars"></i>
+          <div className="mobile-menu__socials">
+            <a href="https://www.facebook.com/profile.php?id=100063653134693" target="_blank" rel="noreferrer" className="icono_redes">
+              <i className="fab fa-facebook-f"></i>
             </a>
-         </div>
-         <div className='header_img_container'>
-            <img src={Logo_alteva} alt="Logo" />
-            <img src={Logo_letras} alt="Logo" className='letras_logo'/>
-         </div>
-         <div className='header_img_container_chico'>
-            <img src={Logo_letras} alt="Logo" className='letras_logo'/>
-         </div>
-         <div className='header_redes_container'>
-            <a href="https://www.facebook.com/profile.php?id=100063653134693" target="_blank" class="icono_redes"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://api.whatsapp.com/send?phone=%2B5493404417996&data=AWBrttyS9oVC_GaCzsU3SS8WFODgnkWHJz4FdpjBJG_Gg7E1J5Lm_1o4eHd-n6tbdvcKDi8xlg140Kr51LwJmwAZ2AaZ_xUoJKPQ1cKKDxe5FWhsX5u4WwsgFCMj1gLOtB-4ljQ_IAgMClmNzN9t8cgfvrorFUrFp-yeWPc-g2fvsxc0qTSR-rMAyNUhFABSpZAWAdKM1ayHcnOEz3_D4NlL0RjEhElmNRyrxz8qAphq48cVOQb7yf6omZuLkChJPlq7muLrvnSmZoHWz6AySP1Lr4zoc25d7IDZyF0iUhJAsaN8AKA&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1WcVThJwP41mPqP2urw7_e2Us64wVNquBq9ZqBYP0N9-AynQxxDv2qyEo" target="_blank" class="icono_redes"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/dario.j.p/" target="_blank" class="icono_redes"><i class="fab fa-instagram"></i></a>
-         </div>
-
-
-
-         <Offcanvas show={show} onHide={handleClose}>
-            <Offcanvas.Header closeButton></Offcanvas.Header>
-            <Offcanvas.Body>
-               <nav class="NavBar">
-                  <Link onClick={handleClose} to="/" className='inicio_page_header'>INICIO</Link>
-                  <Link onClick={handleClose} to="/Productos" className='productos_page_header'>PRODUCTOS</Link>
-                  <Link onClick={handleClose} to="/SobreNosotros" className='sobreNosotros_page_header'>SOBRE NOSTROS</Link>
-                  <Link onClick={handleClose} to="/Contacto" className='sobreNosotros_page_header'>CONTACTO</Link>
-               </nav>
-            </Offcanvas.Body>
-         </Offcanvas>
-      </header>
-      </>
-   
-      )
+            <a href="https://api.whatsapp.com/send?phone=%2B5493404417996&data=AWBrttyS9oVC_GaCzsU3SS8WFODgnkWHJz4FdpjBJG_Gg7E1J5Lm_1o4eHd-n6tbdvcKDi8xlg140Kr51LwJmwAZ2AaZ_xUoJKPQ1cKKDxe5FWhsX5u4WwsgFCMj1gLOtB-4ljQ_IAgMClmNzN9t8cgfvrorFUrFp-yeWPc-g2fvsxc0qTSR-rMAyNUhFABSpZAWAdKM1ayHcnOEz3_D4NlL0RjEhElmNRyrxz8qAphq48cVOQb7yf6omZuLkChJPlq7muLrvnSmZoHWz6AySP1Lr4zoc25d7IDZyF0iUhJAsaN8AKA&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1WcVThJwP41mPqP2urw7_e2Us64wVNquBq9ZqBYP0N9-AynQxxDv2qyEo" target="_blank" rel="noreferrer" className="icono_redes">
+              <i className="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/dario.j.p/" target="_blank" rel="noreferrer" className="icono_redes">
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div>
+        </Offcanvas.Body>
+      </Offcanvas>
+    </header>
+  )
 }
 export default Header

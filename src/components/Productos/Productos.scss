@@ -1,40 +1,118 @@
-.productos_container{
+// Productos.scss
+.productos_container {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 40px 0 50px 0;
   flex-direction: column;
   align-items: center;
-  section{
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-    justify-content: center;
+  background-color: #faf8f4;
+  padding-bottom: 60px;
+
+  .productos_header {
     width: 80%;
+    max-width: 1100px;
+    padding: 60px 0 30px 0;
+
+    .productos_titulo {
+      font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      font-size: 42px;
+      font-weight: 600;
+      color: #b5662a;
+      margin: 0 0 16px 0;
+      text-transform: capitalize;
+    }
+
+    .productos_descripcion {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #6f6a63;
+      max-width: 700px;
+      margin: 0;
+    }
+  }
+
+  .productos_toolbar {
+    width: 80%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e7e2d9;
+    margin-bottom: 40px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    color: #4a453e;
+
+    .productos_orden {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 0.03em;
+      font-size: 13px;
+      color: #8a8378;
+
+      select {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 14px;
+        color: #201d19;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 50px;
+    width: 80%;
+    max-width: 1100px;
+  }
+
+  .cargar_mas {
+    margin-top: 50px;
+    padding: 16px 40px;
+    background: transparent;
+    border: 1.5px solid #201d19;
+    border-radius: 9999px;
+    color: #201d19;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background-color: #201d19;
+      color: white;
+    }
   }
 }
-.pagination {
-  margin-top: 20px;
-  text-align: center;
-  button {
-    margin: 5px;
-    padding: 8px 12px;
-    background-color: #eee;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.2s;
-    color:#333 ;
-}
-}
 
-.pagination button:hover {
-  background-color: #ddd;
-}
-
-.pagination .active {
-  background-color: #333;
-  color: white;
+@media (max-width: 768px) {
+  .productos_container {
+    .productos_header {
+      width: 90%;
+      .productos_titulo {
+        font-size: 30px;
+      }
+    }
+    .productos_toolbar {
+      width: 90%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    section {
+      grid-template-columns: 1fr;
+      width: 90%;
+      gap: 40px;
+    }
+  }
 }
 
 .serif {

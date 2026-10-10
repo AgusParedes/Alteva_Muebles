@@ -1,205 +1,451 @@
-.div_SNContainer{
-    .div_introduccionSN{
-        margin: 15px 0 15px 0;
+// Si tu proyecto no carga Google Fonts globalmente (ej. en index.html),
+// podés dejar este @import acá. Si ya las tenés cargadas, podés borrarlo.
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ====================== Tokens ====================== */
+
+$color-bg-cream: #faf8f4;
+$color-bg-section: #f2ebdd;
+$color-white: #ffffff;
+
+$color-text-primary: #2b241d;
+$color-text-secondary: #5c4f41;
+$color-text-muted: #8b7c6a;
+
+$color-accent: #a8622e;
+$color-accent-dark: #8c5326;
+
+$color-border: #e7dcc7;
+$color-border-strong: #cdb48c;
+
+$font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+$container-max: 1320px;
+$section-padding-y: 96px;
+$section-padding-x: 56px;
+
+$radius-sm: 8px;
+$radius-md: 14px;
+$radius-lg: 20px;
+
+@mixin respond($bp) {
+  @if $bp == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if $bp == mobile {
+    @media (max-width: 640px) {
+      @content;
+    }
+  }
+}
+
+/* ====================== Componente ====================== */
+
+.alteva-page {
+  background: $color-bg-cream;
+  color: $color-text-primary;
+  font-family: $font-sans;
+  line-height: 1.5;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* -------- Elemento compartido: eyebrow -------- */
+
+  .eyebrow {
+    margin: 0 0 18px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-accent;
+  }
+
+  /* -------- Sección: ¿Quiénes somos? -------- */
+
+  .about {
+    padding: $section-padding-y $section-padding-x;
+
+    &__inner {
+      max-width: $container-max;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    &__title {
+      margin: 0 0 28px;
+      font-family: $font-serif;
+      font-size: clamp(2.2rem, 3.2vw, 3.2rem);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+
+    &__lead {
+      margin: 0 0 40px;
+      max-width: 62ch;
+      font-size: 17px;
+      line-height: 1.75;
+      color: $color-text-secondary;
+    }
+
+    &__media {
+      position: sticky;
+      top: 32px;
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 560px;
+      object-fit: cover;
+      border-radius: $radius-lg;
+      background: $color-border; // placeholder mientras carga
+    }
+  }
+
+  .value-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .value-card {
+    padding: 22px 20px;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+
+    &__eyebrow {
+      margin: 0 0 10px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $color-accent;
+    }
+
+    &__title {
+      margin: 0 0 8px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    &__text {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: $color-text-secondary;
+    }
+  }
+
+  /* -------- Sección: Metodología de trabajo -------- */
+
+  .methodology {
+    padding: $section-padding-y $section-padding-x;
+    background: $color-bg-section;
+
+    &__header {
+      max-width: $container-max;
+      margin: 0 auto 48px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid $color-border-strong;
+    }
+
+    &__title {
+      margin: 4px 0 0;
+      font-family: $font-serif;
+      font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+      font-weight: 500;
+    }
+
+    &__grid {
+      max-width: $container-max;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  }
+
+  .step-card {
+    display: flex;
+    flex-direction: column;
+    padding: 28px 24px;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+
+    &__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 22px;
+      border-radius: 10px;
+      background: $color-bg-section;
+      color: $color-accent;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    &__title {
+      margin: 0 0 10px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    &__text {
+      flex-grow: 1;
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: $color-text-secondary;
+    }
+
+    &__footer {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid $color-border;
+      font-size: 13px;
+      color: $color-text-muted;
+    }
+  }
+
+  /* -------- Sección: Pagos -------- */
+
+  .payments {
+    padding: $section-padding-y $section-padding-x;
+
+    &__header {
+      max-width: 640px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    &__title {
+      margin: 4px 0 20px;
+      font-family: $font-serif;
+      font-size: clamp(2rem, 2.6vw, 2.6rem);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    &__lead {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.75;
+      color: $color-text-secondary;
+    }
+
+    &__grid {
+      max-width: $container-max;
+      margin: 0 auto 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+  }
+
+  .stage-card {
+    padding: 36px 40px;
+    background: $color-white;
+    border: 1.5px solid $color-border-strong;
+    border-radius: $radius-lg;
+
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 26px;
+      gap: 12px;
+    }
+
+    &__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $color-accent-dark;
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $color-accent;
+        flex-shrink: 0;
+      }
+    }
+
+    &__step {
+      font-size: 13px;
+      color: $color-text-muted;
+      white-space: nowrap;
+    }
+
+    &__headline {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    &__percent {
+      font-family: $font-serif;
+      font-size: 52px;
+      line-height: 1;
+      color: $color-accent;
+    }
+
+    &__label {
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    &__text {
+      margin: 0 0 22px;
+      font-size: 15px;
+      color: $color-text-secondary;
+    }
+
+    &__checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 0 0 22px;
+      padding: 18px 20px;
+      list-style: none;
+      background: $color-bg-section;
+      border-radius: $radius-md;
+
+      li {
         display: flex;
-        justify-content: center;
-        div{
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .titulo_introduccionSN{
-                text-align: center;
-                font-size: 30px;
-            }
-            .descripcion_introduccionSN{
-                margin: 10px 15px 0 15px;
-                font-size: 16px;
-                font-family: "Raleway", sans-serif;
-                text-align: justify;
-            }
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 14px;
+        color: $color-text-primary;
+
+        svg {
+          flex-shrink: 0;
+          margin-top: 2px;
+          color: $color-accent;
         }
+      }
     }
-    .div_secciones_container{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        margin: 30px 0 30px 0;
-        .div_secciones{
-            width: 70%;
-            display: flex;
-            justify-content: center;
-            .div_iconoSN{
-                display: flex;
-                justify-content: end;
-                text-align: justify;
-                .iconoSN{
-                    font-family: Material Symbols Outlined;
-                    font-size: 400px;
-                    font-style: normal;
-                    line-height: 1;
-                }
-            }
-        }
-        
-        .div_textoSN{
-            width: 55%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 15px 0 15px;
-            gap: 10px;
-            .tituloSN{
-                font-size: 40px;
-                margin-bottom: 15px;
-            }
-            .descripcionSN{
-                font-size: 20px;
-            }
-            .texto_oscuro{
-                color: white;
-            }
-        }
-        .div_iconoSN_oscuro{
-            width: 45%;
-            display: flex;
-            justify-content: start;
-            .iconosOscuros{
-                color: white;
-                font-family: Material Symbols Outlined;
-                font-size: 400px;
-                font-style: normal;
-                line-height: 1;
-            }
-        }
+
+    &__footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: $color-text-muted;
+
+      svg {
+        flex-shrink: 0;
+        color: $color-text-muted;
+      }
     }
-    .seccion_oscura{
-        background-color: currentColor;
-        flex-direction: row-reverse;
+  }
+
+  .payment-methods {
+    max-width: $container-max;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 28px;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+
+    &__label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 700;
+
+      svg {
+        color: $color-accent;
+      }
     }
-}
-@media (max-width: 1490px) {
-    .div_SNContainer{
-        .div_introduccionSN{
-            margin: 15px 0 15px 0;
-            display: flex;
-            justify-content: center;
-            div{
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-        }
+
+    &__badges {
+      display: flex;
+      gap: 12px;
     }
-}
-@media (max-width: 1030px) {
-    .div_SNContainer{
-        .div_secciones_container{
-            .div_secciones{
-                .div_iconoSN{
-                    .iconoSN{
-                        font-size: 300px;
-                        line-height: 1;
-                    }
-                }
-            }
-            .div_textoSN{
-                width: 75%;
-                .tituloSN{
-                    font-size: 38px;
-                }
-                .descripcionSN{
-                    font-size: 17px;
-                }
-            }
-            .div_iconoSN_oscuro{
-                .iconosOscuros{
-                    font-size: 300px;
-                }
-            }
-        }
+
+    .badge {
+      padding: 8px 16px;
+      border: 1px solid $color-border-strong;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+      text-align: center;
+      text-transform: uppercase;
+      color: $color-text-secondary;
     }
-}
-@media (max-width: 942px) {
-    .div_SNContainer{
-        .div_secciones_container{
-            .div_secciones{
-                .div_iconoSN{
-                    .iconoSN{
-                        font-size: 300px;
-                        line-height: 1;
-                    }
-                }
-            }
-            .div_textoSN{
-                width: 75%;
-                .tituloSN{
-                    font-size: 33px;
-                }
-                .descripcionSN{
-                    font-size: 17px;
-                }
-            }
-            .div_iconoSN_oscuro{
-                .iconosOscuros{
-                    font-size: 300px;
-                }
-            }
-            .seccion_oscura{
-                margin: 30px 0 30px 0;
-            }
-        }
+  }
+
+  /* ====================== Responsive ====================== */
+
+  @include respond(tablet) {
+    .about__inner {
+      grid-template-columns: 1fr;
     }
-}
-@media (max-width: 840px) {
-    .div_SNContainer{
-        .div_secciones_container{
-            .div_secciones{
-                flex-wrap: wrap;
-                align-items: center;
-                width: 90%;
-                margin: 30px 0 55px 0;
-                .div_iconoSN{
-                    .iconoSN{
-                        font-size: 250px;
-                        line-height: 1;
-                    }
-                }
-            }
-            .div_textoSN{
-                width: 100%;
-                .tituloSN{
-                    font-size: 33px;
-                    text-align: center;
-                }
-                .descripcionSN{
-                    font-size: 17px;
-                    text-align: justify;
-                }
-            }
-            .div_iconoSN_oscuro{
-                justify-content: center;
-                .iconosOscuros{
-                    font-size: 250px;
-                }
-            }
-        }
+    .about__media {
+      position: static;
+      order: -1;
     }
-}
-@media (max-width: 660px) {
-    .div_SNContainer{
-        .div_introduccionSN{
-            div{
-                width: 95%;
-                .titulo_introduccionSN{
-                    font-size: 28px;
-                }
-                .descripcion_introduccionSN{
-                    font-size: 17px;
-                    text-align: justify;
-                }
-            }
-        }
+    .methodology__grid {
+      grid-template-columns: repeat(2, 1fr);
     }
+    .payments__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include respond(mobile) {
+    .about,
+    .methodology,
+    .payments {
+      padding: 56px 20px;
+    }
+    .value-cards {
+      grid-template-columns: 1fr;
+    }
+    .methodology__grid {
+      grid-template-columns: 1fr;
+    }
+    .stage-card {
+      padding: 28px 22px;
+    }
+    .stage-card__percent {
+      font-size: 42px;
+    }
+    .payment-methods {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }

@@ -1,34 +1,53 @@
 import './Footer.scss'
 import Logo_alteva from '../../assets/Logo_alteva.png'
-import Logo_alteva_blanco from '../../assets/Logo_alteva_blanco.png'
+import { Link } from 'react-router-dom'
 
 export const Footer = () => {
 
     return(
-    <footer>
-        <div className='div_containerFooter'>
-            <div className='div_footerIzq'>
-                <p>©Copyright Alteva- 2025. Todos los derechos reservados.</p>
+    <footer className="footer" id="contacto">
+        <div className="footer__top">
+          <div className="footer__brand">
+            <img src={Logo_alteva} alt="Alteva Muebles" />
+            <p>
+              Curando espacios con alma y diseño orgánico para el hogar
+              contemporáneo.
+            </p>
+          </div>
+
+          <div className="footer__column">
+            <h4>NAVEGACIÓN</h4>
+                <Link to="/">INICIO</Link>
+                <Link to="/Productos">PRODUCTOS</Link>
+                <Link to="/SobreNosotros">SOBRE NOSTROS</Link>
+                <Link to="/Contacto">CONTACTO</Link>
+          </div>
+
+          <div className="footer__column">
+            <h4>CONTACTO</h4>
+            <p>Guillermo Tell 135, San Jeronimo Norte</p>
+            <p>+54 3404 417996</p>
+            <a href="mailto:DarioColoParedes@gmail.com">DarioColoParedes@gmail.com</a>
+          </div>
+
+          <div className="footer__column footer__social">
+            <h4>SÍGUENOS</h4>
+            <div>
+              <button><i className="fab fa-facebook-f"></i></button>
+              <button><i className="fab fa-whatsapp"></i></button>
+              <button><i className="fab fa-instagram"></i></button>
             </div>
-            <div className='div_footerMed'>
-                <div>
-                    <img src={Logo_alteva} alt="logo" />
-                </div>
-                <p>
-                    CONTACTO: 3404417996
-                </p>
-                <div className='div_redesFooter'>
-                    <a href="https://www.facebook.com/profile.php?id=100063653134693" target="_blank" class="icono_redes"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=%2B5493404417996&data=AWBrttyS9oVC_GaCzsU3SS8WFODgnkWHJz4FdpjBJG_Gg7E1J5Lm_1o4eHd-n6tbdvcKDi8xlg140Kr51LwJmwAZ2AaZ_xUoJKPQ1cKKDxe5FWhsX5u4WwsgFCMj1gLOtB-4ljQ_IAgMClmNzN9t8cgfvrorFUrFp-yeWPc-g2fvsxc0qTSR-rMAyNUhFABSpZAWAdKM1ayHcnOEz3_D4NlL0RjEhElmNRyrxz8qAphq48cVOQb7yf6omZuLkChJPlq7muLrvnSmZoHWz6AySP1Lr4zoc25d7IDZyF0iUhJAsaN8AKA&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1WcVThJwP41mPqP2urw7_e2Us64wVNquBq9ZqBYP0N9-AynQxxDv2qyEo" target="_blank" class="icono_redes"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/dario.j.p/" target="_blank" class="icono_redes"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div className='div_footerDer'>
-                
-            </div>
+          </div>
         </div>
-        
-    </footer>
+
+        <div className="footer__bottom">
+          <span>© 2026 ALTEVA MUEBLES. TODOS LOS DERECHOS RESERVADOS.</span>
+          <div>
+            <a href="#inicio">PRIVACIDAD</a>
+            <a href="#inicio">TÉRMINOS</a>
+          </div>
+        </div>
+      </footer>
 )
 }
 export default Footer
