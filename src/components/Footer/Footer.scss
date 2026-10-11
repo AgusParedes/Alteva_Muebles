@@ -1,4 +1,6 @@
+
 $soft-bg: #f3f1ed;
+
 .footer {
   padding: 50px 4.3% 20px;
   background: $soft-bg;
@@ -6,12 +8,14 @@ $soft-bg: #f3f1ed;
 
   &__top {
     display: grid;
-    grid-template-columns: 1.35fr 1fr 1.2fr 0.8fr;
-    gap: 70px;
-    padding-bottom: 55px;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: 40px;
+    padding-bottom: 45px;
   }
 
   &__brand {
+    min-width: 0;
+
     img {
       width: 55px;
       height: 30px;
@@ -33,6 +37,7 @@ $soft-bg: #f3f1ed;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    min-width: 0;
 
     h4 {
       margin: 0 0 7px;
@@ -46,18 +51,29 @@ $soft-bg: #f3f1ed;
       margin: 0;
       color: #514d47;
       font-size: 11px;
-      line-height: 1.4;
+      line-height: 1.6;
       text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #9b825c;
+      }
     }
   }
 
   &__social {
     > div {
       display: flex;
+      flex-wrap: wrap;
       gap: 8px;
     }
 
     button {
+      flex-shrink: 0;
       width: 32px;
       height: 32px;
       display: grid;
@@ -67,6 +83,12 @@ $soft-bg: #f3f1ed;
       background: transparent;
       color: #514d47;
       cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background: #9b825c;
+        color: #fff;
+      }
     }
   }
 
@@ -74,13 +96,147 @@ $soft-bg: #f3f1ed;
     padding-top: 20px;
     border-top: 1px solid #d4cec4;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 20px;
     color: #817b73;
     font-size: 8px;
 
+    span {
+      line-height: 1.7;
+    }
+
     div {
       display: flex;
+      flex-wrap: wrap;
       gap: 25px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      white-space: nowrap;
+
+      &:hover {
+        color: #9b825c;
+      }
     }
   }
 }
+
+/* Tablets y notebooks pequeñas */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 40px 5% 20px;
+
+
+    &__brand {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;}
+
+    &__top {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 35px 40px;
+      padding-bottom: 35px;
+    }
+
+    &__brand p {
+      max-width: 280px;
+    }
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .footer {
+    padding: 35px 6% 20px;
+
+    &__top {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px 20px;
+      padding-bottom: 30px;
+    }
+
+    // Logo: ocupa las dos columnas
+    &__brand {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      img {
+        margin-bottom: 15px;
+      }
+
+      p {
+        max-width: 300px;
+        text-align: center;
+      }
+    }
+
+    // Navegación y contacto: quedan a la par
+    &__column {
+      gap: 10px;
+
+      h4 {
+        margin-bottom: 5px;
+        font-size: 9px;
+      }
+
+      a,
+      p {
+        font-size: 11px;
+        overflow-wrap: anywhere;
+      }
+    }
+
+    // Redes sociales: ocupan las dos columnas
+    &__social {
+      grid-column: 1 / -1;
+
+      > div {
+        gap: 10px;
+      }
+    }
+
+    // Pie inferior
+    &__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      padding-top: 18px;
+      font-size: 9px;
+
+      div {
+        gap: 20px;
+      }
+    }
+  }
+}
+
+/* Celulares muy angostos */
+@media (max-width: 360px) {
+  .footer {
+    padding-right: 5%;
+    padding-left: 5%;
+
+    &__top {
+      column-gap: 14px;
+    }
+
+    &__column a,
+    &__column p {
+      font-size: 10px;
+    }
+
+    &__bottom {
+      font-size: 8px;
+
+      div {
+        gap: 15px;
+      }
+    }
+  }
+}
+
