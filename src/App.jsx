@@ -17,6 +17,7 @@ function App() {
      <div className="app-container">
        <BrowserRouter>
          <Header />
+         
          <div className="main-content">
            <Routes>
               <Route path='/' element={<Index />} />
@@ -30,7 +31,6 @@ function App() {
               <Route path="/Admin-panel" element={<AdminPanel />} />
            </Routes>
          </div>
- 
          <Footer />
        </BrowserRouter>
      </div>
