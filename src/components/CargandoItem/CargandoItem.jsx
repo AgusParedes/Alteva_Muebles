@@ -2,9 +2,32 @@ import './CargandoItem.scss'
 
 export const CargandoItem = () => {
    return(
-      <div className='div_cargando_container'>
-         <div className='div_img_container'><img src="/Cargando.gif" alt="CargandoItem" className='logo_cargando'/></div>
-      </div>
+      <svg
+  class="container"
+  viewBox="0 0 40 40"
+  height="40"
+  width="40"
+>
+  <circle 
+    class="track"
+    cx="20" 
+    cy="20" 
+    r="17.5" 
+    pathlength="100" 
+    stroke-width="5px" 
+    fill="none" 
+  />
+  <circle 
+    class="car"
+    cx="20" 
+    cy="20" 
+    r="17.5" 
+    pathlength="100" 
+    stroke-width="5px" 
+    fill="none" 
+  />
+</svg>
+
    )
 }
 export default CargandoItem

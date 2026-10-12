@@ -1,5 +1,6 @@
 import React from 'react';
 import './SobreNosotros.scss';
+import SobreNosotrosImage from '../../assets/Sobre_Nosotros-IMG.jpeg';
 
 /* ---------- Iconos inline (sin dependencias externas) ---------- */
 
@@ -168,8 +169,8 @@ export function SobreNosotros() {
             {/* Reemplazá el src por la imagen real del taller */}
             <img
               className="about__image"
-              src="/images/taller-alteva.jpg"
-              alt="Carpinteros trabajando en el taller de Alteva"
+              src={SobreNosotrosImage}
+              alt="Equipo de Alteva colocando un mueble a medida en un hogar"
             />
           </div>
         </div>

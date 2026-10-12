@@ -10,8 +10,7 @@ export const Footer = () => {
           <div className="footer__brand">
             <img src={Logo_alteva} alt="Alteva Muebles" />
             <p>
-              Curando espacios con alma y diseño orgánico para el hogar
-              contemporáneo.
+              Diseñamos muebles que combinan estética, funcionalidad y calidad para cada ambiente de tu hogar.
             </p>
           </div>
 

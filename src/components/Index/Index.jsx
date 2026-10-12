@@ -84,9 +84,7 @@ export function Index() {
       <main>
         <section className="hero" id="inicio">
           <h1>Diseño que transforma tu hogar.</h1>
-          <p className="hero__text">
-            Creamos espacios con alma. Muebles de diseño contemporáneo,
-            fabricados con materiales nobles para vivir el día a día.
+          <p className="hero__text">Diseñamos muebles que combinan estética, funcionalidad y calidad para cada ambiente de tu hogar.
           </p>
 
           <div className="hero__buttons">
