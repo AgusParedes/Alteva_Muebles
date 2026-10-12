@@ -27,9 +27,6 @@ export const ProductDetailContainer = () => {
       })
       .then((productData) => {
         if (!productData?.categoria) return null;
-        // Traemos otros muebles de la misma categoría para la sección
-        // "Otros muebles de [categoría]". Pedimos 4 por si el producto
-        // actual está entre los resultados, y nos quedamos con 3.
         const relatedQuery = query(
           collection(db, "Muebles"),
           where("categoria", "==", productData.categoria),

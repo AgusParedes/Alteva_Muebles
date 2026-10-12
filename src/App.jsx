@@ -9,7 +9,7 @@ import { ProductDetailContainer } from './components/ProductDetailContainer/Prod
 import { Footer } from './components/Footer/Footer.jsx'
 import { AdminPanel } from './components/AdminPanel/AdminPanel.jsx'
 import { AdminLogin } from './components/AdminLogin/AdminLogin.jsx'
-import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx'
+import { ScrollToTop } from './components/ScrollToTop/ScrollToTop.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
@@ -17,8 +17,9 @@ function App() {
    return (
      <div className="app-container">
        <BrowserRouter>
-         <Header />
          <ScrollToTop />
+         <Header />
+ 
          <div className="main-content">
            <Routes>
               <Route path='/' element={<Index />} />
@@ -32,7 +33,6 @@ function App() {
               <Route path="/Admin-panel" element={<AdminPanel />} />
            </Routes>
          </div>
- 
          <Footer />
        </BrowserRouter>
      </div>
