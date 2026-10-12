@@ -148,6 +148,7 @@ export const ProductDetail = ({ Product, relatedProducts = [] }) => {
                   <Link
                     to={`/producto/${item.id}`}
                     className="ver_mas_card"
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     Ver más 
                   </Link>

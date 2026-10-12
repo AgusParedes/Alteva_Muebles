@@ -9,10 +9,16 @@ import { CargandoItem } from '../CargandoItem/CargandoItem'
 export const ProductDetailContainer = () => {
   const [Product, setProduct] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
+  const [cargando, setCargando] = useState(true);
   const { ProductId } = useParams();
 
   useEffect(() => {
     let isMounted = true;
+
+    setCargando(true);
+    setProduct(null);
+    setRelatedProducts([]);
+
     const mueblesRef = doc(db, "Muebles", ProductId);
 
     getDoc(mueblesRef)
@@ -27,9 +33,6 @@ export const ProductDetailContainer = () => {
       })
       .then((productData) => {
         if (!productData?.categoria) return null;
-        // Traemos otros muebles de la misma categoría para la sección
-        // "Otros muebles de [categoría]". Pedimos 4 por si el producto
-        // actual está entre los resultados, y nos quedamos con 3.
         const relatedQuery = query(
           collection(db, "Muebles"),
           where("categoria", "==", productData.categoria),
@@ -45,22 +48,21 @@ export const ProductDetailContainer = () => {
           .slice(0, 3);
         if (isMounted) setRelatedProducts(items);
       })
-      .catch((e) => console.log(e));
+      .catch((e) => console.log(e))
+      .finally(() => {
+        if (isMounted) setCargando(false);
+      });
 
     return () => {
       isMounted = false;
     };
   }, [ProductId]);
 
-  return (
-    <>
-      {Product ? (
-        <ProductDetail Product={Product} relatedProducts={relatedProducts} />
-      ) : (
-        <CargandoItem />
-      )}
-    </>
-  );
+  if (cargando) return <CargandoItem />;
+
+  if (!Product) return <p>No se encontró este producto.</p>;
+
+  return <ProductDetail Product={Product} relatedProducts={relatedProducts} />;
 };
 
 export default ProductDetailContainer;
