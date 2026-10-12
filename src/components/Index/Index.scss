@@ -315,6 +315,9 @@ a {
 }
 
 .material {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   img {
     width: 125px;
     height: 125px;

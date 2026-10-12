@@ -41,10 +41,6 @@ export const Footer = () => {
 
         <div className="footer__bottom">
           <span>© 2026 ALTEVA MUEBLES. TODOS LOS DERECHOS RESERVADOS.</span>
-          <div>
-            <a href="#inicio">PRIVACIDAD</a>
-            <a href="#inicio">TÉRMINOS</a>
-          </div>
         </div>
       </footer>
 )

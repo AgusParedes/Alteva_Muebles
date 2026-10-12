@@ -101,7 +101,7 @@ const STEPS = [
 
 function StageCard({ tag, step, percent, label, text, items, footerIcon, footerText }) {
   return (
-    <article className="stage-card">
+    <article className="timeline-view animate-slide-in-left animate-range-[entry_3%_contain_80%] stage-card">
       <div className="stage-card__top">
         <span className="stage-card__tag">
           <span className="dot" />
@@ -141,7 +141,7 @@ export function SobreNosotros() {
       {/* ---------- Sección: ¿Quiénes somos? ---------- */}
       <section className="about">
         <div className="about__inner">
-          <div className="about__content">
+          <div className="animate-fade-in about__content">
             <p className="eyebrow">Nuestros valores</p>
             <h1 className="about__title">¿Quiénes somos?</h1>
             <p className="about__lead">
@@ -154,7 +154,7 @@ export function SobreNosotros() {
               ideas en muebles que se destaquen por su calidad y diseño personalizado.
             </p>
 
-            <div className="value-cards">
+            <div className="timeline-view animate-fade-in animate-range-[entry_5%_contain_20%] value-cards">
               {VALUES.map((v) => (
                 <div className="value-card" key={v.number}>
                   <p className="value-card__eyebrow">{v.number} • Eje</p>
@@ -166,9 +166,8 @@ export function SobreNosotros() {
           </div>
 
           <div className="about__media">
-            {/* Reemplazá el src por la imagen real del taller */}
             <img
-              className="about__image"
+              className="animate-fade-in about__image"
               src={SobreNosotrosImage}
               alt="Equipo de Alteva colocando un mueble a medida en un hogar"
             />
@@ -183,9 +182,9 @@ export function SobreNosotros() {
           <h2 className="methodology__title">Cómo hacemos realidad tu proyecto</h2>
         </div>
 
-        <div className="methodology__grid">
+        <div className="timeline-view animate-slide-in-left animate-range-[entry_3%_contain_80%] methodology__grid">
           {STEPS.map((s) => (
-            <div className="step-card" key={s.number}>
+            <div className="timeline-view animate-slide-in-left animate-range-[entry_5%_contain_20%] step-card" key={s.number}>
               <span className="step-card__number">{s.number}</span>
               <h3 className="step-card__title">{s.title}</h3>
               <p className="step-card__text">{s.text}</p>
@@ -197,7 +196,7 @@ export function SobreNosotros() {
 
       {/* ---------- Sección: Pagos ---------- */}
       <section className="payments">
-        <div className="payments__header">
+        <div className="timeline-view animate-fade-in animate-range-[entry_5%_contain_20%] payments__header">
           <p className="eyebrow">Transparencia & claridad</p>
           <h2 className="payments__title">Pagos</h2>
           <p className="payments__lead">

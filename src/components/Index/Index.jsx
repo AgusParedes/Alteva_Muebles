@@ -82,7 +82,7 @@ export function Index() {
   return (
     <div className="home">
       <main>
-        <section className="hero" id="inicio">
+        <section className="animate-fade-in hero" id="inicio">
           <h1>Diseño que transforma tu hogar.</h1>
           <p className="hero__text">Diseñamos muebles que combinan estética, funcionalidad y calidad para cada ambiente de tu hogar.
           </p>
@@ -97,7 +97,7 @@ export function Index() {
           </div>
         </section>
 
-        <section className="features" id="nosotros">
+        <section className="timeline-view animate-fade-in animate-range-[entry_5%_contain_20%] features" id="nosotros">
           <Feature
             icon={<Wrench size={19} />}
             title="Diseño a medida"
@@ -129,7 +129,7 @@ export function Index() {
           <div className="category-grid">
             {categories.map((category) => (
               <article
-                className={category.className}
+                className={category.className + " timeline-view animate-slide-in-left animate-range-[entry_5%_contain_20%]"}
                 key={category.title}
                 style={
                   category.image
@@ -153,7 +153,7 @@ export function Index() {
           </div>
         </section>
 
-        <section className="materials section">
+        <section className="timeline-view animate-fade-in animate-range-[entry_5%_contain_20%] materials section">
           <div className="materials__heading">
             <p className="eyebrow">MATERIALES NOBLES</p>
             <h2>Nuestros Acabados</h2>

@@ -2,7 +2,7 @@ import './Contacto.scss';
 
 export const Contacto = () => {
   return (
-    <section className="contacto">
+    <section className="animate-fade-in contacto">
 
       {/* ENCABEZADO */}
       <div className="contacto__header">
